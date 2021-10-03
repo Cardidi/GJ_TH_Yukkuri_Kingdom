@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hitable
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Player
+  - Hitable
+  - VFX
   - 
   - 
   - 
@@ -40,4 +41,31 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4111294259
+    locked: 0
+  - name: Walls
+    uniqueID: 2783354879
+    locked: 0
+  - name: Blockers
+    uniqueID: 3246668715
+    locked: 0
+  - name: Triggers
+    uniqueID: 2471041005
+    locked: 0
+  - name: Movalbe
+    uniqueID: 43552071
+    locked: 0
+  - name: Player VFX
+    uniqueID: 598790839
+    locked: 0
+  - name: Player
+    uniqueID: 25438683
+    locked: 0
+  - name: VFX
+    uniqueID: 3520385461
+    locked: 0
+  - name: UI
+    uniqueID: 1804152551
     locked: 0
