@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1511612417
-  m_SortingLayer: 2
-  m_SortingOrder: 20
+  m_SortingLayer: 4
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 35bcde38806144c3e81990b9ae940c6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 7300341135754922729}
   - component: {fileID: 7300341135754922727}
   - component: {fileID: 7300341135754922728}
-  m_Layer: 11
+  - component: {fileID: 9076798267519407262}
+  m_Layer: 0
   m_Name: L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,6 +156,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9076798267519407262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300341135754922724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f7824094fe4797a2ca2f09d3593373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7300341136040802525
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +179,8 @@ GameObject:
   - component: {fileID: 7300341136040802526}
   - component: {fileID: 7300341136040802524}
   - component: {fileID: 7300341136040802497}
-  m_Layer: 11
+  - component: {fileID: 7112480471550374124}
+  m_Layer: 0
   m_Name: R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,6 +241,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7112480471550374124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300341136040802525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f7824094fe4797a2ca2f09d3593373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7300341136257585850
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +268,7 @@ GameObject:
   - component: {fileID: 7300341136257585824}
   m_Layer: 11
   m_Name: DoorCollider
-  m_TagString: Untagged
+  m_TagString: Hitable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,9 +354,7 @@ MonoBehaviour:
   TargetTransport: {fileID: 0}
   LeftWall: {fileID: 7300341135754922727}
   RightWall: {fileID: 7300341136040802524}
-  TagsFilter:
-  - Player
-  - Hitable
+  TargetObjects: []
   Renderer: {fileID: 7034708009508628676}
   OpenSprite: {fileID: 21300000, guid: f95704a35a22c4e24b49b709b58d2456, type: 3}
   CloseSprite: {fileID: 21300000, guid: 35bcde38806144c3e81990b9ae940c6f, type: 3}

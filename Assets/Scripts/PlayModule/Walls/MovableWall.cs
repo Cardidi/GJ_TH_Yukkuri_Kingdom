@@ -21,6 +21,7 @@ namespace PlayModule
 
         private void OnMouseDown()
         {
+            if (!LevelManager.GetManager().CanInput()) return;
             Animator.speed = 0;
             Seeker.enabled = true;
             IsMoving = false;

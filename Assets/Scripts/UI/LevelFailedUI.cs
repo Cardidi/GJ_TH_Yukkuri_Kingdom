@@ -8,6 +8,7 @@ namespace UI
     {
         
         public Button Retry, Exit;
+        public AudioSource AudioSource;
         public GameObject UIRoot;
         
         private void Awake()
@@ -36,8 +37,11 @@ namespace UI
 
         public void Open()
         {
+            if (UIRoot.activeInHierarchy || LevelManager.GetManager().PassUI.UIRoot.activeInHierarchy) return;
+
             gameObject.SetActive(true);
             UIRoot.SetActive(true);
+            if (AudioSource != null) AudioSource.Play();
         }
 
         private void Hide()

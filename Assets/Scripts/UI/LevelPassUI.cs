@@ -7,6 +7,7 @@ namespace UI
     public class LevelPassUI : MonoBehaviour
     {
         public Button Retry, Next, Exit;
+        public AudioSource AudioSource;
         public GameObject UIRoot;
 
         private string NextLevelPath;
@@ -43,9 +44,12 @@ namespace UI
 
         public void Open(string nextLevelPath)
         {
+            if (UIRoot.activeInHierarchy || LevelManager.GetManager().FailedUI.UIRoot.activeInHierarchy) return;
+            
             NextLevelPath = nextLevelPath;
             gameObject.SetActive(true);
             UIRoot.SetActive(true);
+            if (AudioSource != null) AudioSource.Play();
         }
 
         private void Hide()

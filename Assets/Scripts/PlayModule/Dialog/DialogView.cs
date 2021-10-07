@@ -20,7 +20,7 @@ namespace PlayModule.Dialog
 
         public GameObject RootObject;
 
-        public float NextLineWaitTime = 1.5f;
+        public float NextLineWaitTime = 0.5f;
         
         public bool CanNextLine { get; private set; }
 
@@ -40,6 +40,10 @@ namespace PlayModule.Dialog
         
         public void SetDialog(Sprite leftIcon, Sprite rightIcon, string Name, string Dialog)
         {
+            if (leftIcon == null) leftIcon = LeftIcon.sprite;
+            if (rightIcon == null) rightIcon = RightIcon.sprite;
+            if (string.IsNullOrEmpty(Name)) Name = NameField.text;
+            
             LeftIcon.sprite = leftIcon;
             RightIcon.sprite = rightIcon;
             NameField.text = Name;

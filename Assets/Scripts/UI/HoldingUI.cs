@@ -8,7 +8,8 @@ namespace UI
     {
         public bool Opened;
         public GameObject Root;
-        public Button Return, Retry, Exit;
+        public AudioSource AudioSource;
+        public Button Return, Retry, Exit, Next;
 
         private LevelManager mManager;
 
@@ -36,20 +37,38 @@ namespace UI
             
             Exit.onClick.AddListener(() =>
             {
-                var manager = LevelManager.GetManager();
-                manager.LoadingUI.ReturnTitle();
+                mManager.LoadingUI.ReturnTitle();
                 Opened = !Opened;
             });
+            
+            Next.onClick.AddListener(() =>
+            {
+                if (mManager.TryGetProfile(out var profile))
+                {
+                    mManager.LoadingUI.OpenScene(profile.DefaultNextLevelPath);
+                    Opened = !Opened;
+                }
+            });
+
+            Opened = false;
         }
 
         private void Update()
         {
             if (mManager.GameProfile)
             {
-                if (Input.GetKeyDown(KeyCode.Escape)) Opened = !Opened;
+                var last = Opened;
+                if (mManager.CanInput() && Input.GetKeyDown(KeyCode.Escape)) Opened = !Opened;
                 
                 Root.SetActive(Opened);
                 Time.timeScale = Opened ? 0 : 1;
+
+                if (Opened && !last) AudioSource.Play();
+
+                if (mManager.TryGetProfile(out var profile) && !string.IsNullOrEmpty(profile.DefaultNextLevelPath))
+                {
+                    Next.gameObject.SetActive(true);
+                }
             }
             else
             {

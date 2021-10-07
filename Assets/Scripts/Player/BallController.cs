@@ -21,7 +21,8 @@ namespace Player
         public string[] CollideAnimationTags;
         
         public AudioClip[] CollideAudioClip;
-        
+
+        private LevelManager mManager;
         private bool mUsingTrail1 = true;
         private bool mCanHit = true;
         private bool mCanMove = true;

@@ -45,14 +45,17 @@ TagManager:
   - name: Background
     uniqueID: 4111294259
     locked: 0
-  - name: Walls
-    uniqueID: 2783354879
-    locked: 0
   - name: Blockers
     uniqueID: 3246668715
     locked: 0
   - name: Triggers
     uniqueID: 2471041005
+    locked: 0
+  - name: Walls
+    uniqueID: 2783354879
+    locked: 0
+  - name: Movable VFX
+    uniqueID: 900260519
     locked: 0
   - name: Movalbe
     uniqueID: 43552071

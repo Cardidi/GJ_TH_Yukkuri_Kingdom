@@ -37,6 +37,16 @@ public class LevelManager
         return mProfile != null;
     }
 
+    public bool CanInput()
+    {
+        if (DialogView.RootObject.activeInHierarchy) return false;
+        if (PassUI.UIRoot.activeInHierarchy) return false;
+        if (FailedUI.UIRoot.activeInHierarchy) return false;
+        if (HoldingUI.Root.activeInHierarchy) return false;
+
+        return true;
+    }
+
     public bool GameProfile => mProfile != null && mProfile.IsGameLevel;
     public DialogView DialogView { get; set; }
     public LoadingUIChaser LoadingUI { get; set; }

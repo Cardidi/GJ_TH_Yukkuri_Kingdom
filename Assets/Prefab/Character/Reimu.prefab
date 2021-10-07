@@ -280,7 +280,7 @@ MonoBehaviour:
   Trail2: {fileID: 5372292601056248800}
   AudioSource: {fileID: 5372292601046913090}
   MoveAnimatorChangeValue: 0.4
-  HitAnimatorChangeVelocity: 2
+  HitAnimatorChangeVelocity: 1.5
   Speed: 10
   PointLimit: 2
   CollideAnimationTags:

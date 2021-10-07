@@ -29,7 +29,8 @@ namespace Player
         private void OnMouseDown()
         {
             if (mManager == null) Start();
-            
+            if (!enabled || !mManager.CanInput()) return;
+
             var pos = mCamera.ScreenToWorldPoint(Input.mousePosition);
             mFeedbackController.DoClick(pos, mController.AddDirectionTarget(pos));
         }

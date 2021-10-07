@@ -21,6 +21,11 @@ namespace Player
             }
         }
 
+        private void OnCollisionStay2D(Collision2D other)
+        {
+            //OnCollisionEnter2D(other);
+        }
+
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (mManager == null) Start();

@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Root: {fileID: 4947035310708666424}
-  WaitSeconds: 2
+  WaitSeconds: 1
   TitlePath: Assets/Scenes/Runtime/Title.unity
 --- !u!1 &4947035311287728665
 GameObject:

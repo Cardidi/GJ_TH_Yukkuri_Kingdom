@@ -9,7 +9,7 @@ namespace PlayModule
     {
         public BallTransport TargetTransport;
         public BallTransportWall LeftWall, RightWall;
-        public string[] TagsFilter = {"Player"};
+        public GameObject[] TargetObjects;
         public SpriteRenderer Renderer;
         public Sprite OpenSprite, CloseSprite;
 
@@ -57,6 +57,7 @@ namespace PlayModule
         public void OnBallTransit(GameObject obj, Vector3 ballOffset, bool isRight)
         {
             ballOffset.x = -ballOffset.x;
+            ballOffset.y = -ballOffset.y; // Added
             var wallCenterPoint = isRight ? LeftWall.transform.position : RightWall.transform.position;
             var ballCenterPoint = ballOffset + wallCenterPoint;
             
@@ -78,10 +79,9 @@ namespace PlayModule
 
         public bool IsTransitTarget(GameObject other)
         {
-            foreach (var tag in TagsFilter)
+            foreach (var obj in TargetObjects)
             {
-                if (other.CompareTag(tag))
-                    return true;
+                if (other == obj) return true;
             }
 
             return false;

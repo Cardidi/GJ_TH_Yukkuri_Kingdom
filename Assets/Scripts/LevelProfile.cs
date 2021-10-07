@@ -9,6 +9,7 @@ public class LevelProfile : MonoBehaviour
     public Camera Camera;
     public ClickFeedbackController ClickFeedback;
     public bool IsGameLevel;
+    public string DefaultNextLevelPath;
     
     private LevelManager mManager;
 

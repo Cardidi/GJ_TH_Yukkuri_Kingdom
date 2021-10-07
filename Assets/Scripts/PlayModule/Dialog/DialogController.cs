@@ -18,13 +18,19 @@ namespace PlayModule.Dialog
             View = LevelManager.GetManager().DialogView;
             View.OnNextLineCalled += OnNextLine;
             OnNextLine(View);
-            View.Show();
         }
 
         private void Update()
         {
             if (View.CanNextLine && Input.GetKeyDown(KeyCode.Return))
                 OnNextLine(View);
+
+
+            if (View.CanNextLine && Input.GetKeyDown(KeyCode.S))
+            {
+                mCurrentLine = Blocks.Length;
+                OnNextLine(View);
+            }
         }
 
         private void OnNextLine(DialogView view)
@@ -35,7 +41,8 @@ namespace PlayModule.Dialog
                 View.Hide();
                 return;
             }
-
+            
+            View.Show();
             var line = Blocks[mCurrentLine];
             view.SetDialog(line.LeftImage, line.RightImage, line.Name, line.Text);
             mCurrentLine++;
