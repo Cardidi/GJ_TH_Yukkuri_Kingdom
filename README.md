@@ -15,10 +15,10 @@ You can press Esc in game to suspend game, restart game, return title page or sk
 
 Prototype : Yiyang Zhong
 
-Programmer : Ca2didi
+Programmer : Ca2didi (Yuyang Zhang)
 
 Designer : Yiyang Zhong
 
 Artist : Yangfan Li
 
-Musican : Lelouch
+Musican : Lelouch (Humin Li)
