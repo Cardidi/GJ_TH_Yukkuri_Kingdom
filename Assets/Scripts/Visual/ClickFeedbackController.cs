@@ -23,7 +23,7 @@ namespace Visual
                 false);
             
             mPoolInvalid = new PoolRoot(
-                3,
+                4,
                 Pool =>
                 {
                     var obj = Instantiate(InvalidPrefab, VFXRoot.transform);
@@ -39,6 +39,7 @@ namespace Visual
                 if (mPoolValid.TryGetObject(out var instance))
                 {
                     var confirm = instance as ClickFeedbackBehaviour;
+                    position.z = confirm.transform.position.z;
                     confirm.transform.position = position;
                 }   
             }
@@ -47,6 +48,7 @@ namespace Visual
                 if (mPoolInvalid.TryGetObject(out var instance))
                 {
                     var confirm = instance as ClickFeedbackBehaviour;
+                    position.z = confirm.transform.position.z;
                     confirm.transform.position = position;
                 }
             }
