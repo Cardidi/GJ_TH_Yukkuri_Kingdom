@@ -53,6 +53,11 @@ namespace UI
             Opened = false;
         }
 
+        public void OpenIt()
+        {
+            if (mManager.CanInput()) Opened = !Opened;
+        }
+
         private void Update()
         {
             if (mManager.GameProfile)

@@ -13,6 +13,7 @@ namespace Init
         public GameObject LevelPassUI;
         public GameObject LevelFailedUI;
         public GameObject HoldingUI;
+        public GameObject CoverageUI;
         
         
         public string InitScenePath;
@@ -41,6 +42,8 @@ namespace Init
             var fail = Instantiate(LevelFailedUI, transform);
             manager.FailedUI = fail.GetComponentInChildren<LevelFailedUI>();
             fail.SetActive(false);
+
+            Instantiate(CoverageUI, transform);
             
             manager.LoadingUI.OpenScene(InitScenePath);
         }
