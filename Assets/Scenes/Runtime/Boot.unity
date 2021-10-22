@@ -157,7 +157,7 @@ MonoBehaviour:
   LevelPassUI: {fileID: 4419581387674319914, guid: 54dc69969a35949659dec5adf57b1f5d, type: 3}
   LevelFailedUI: {fileID: 5016597896710171890, guid: c14b701eeb0094200b37f7b34d58f8b9, type: 3}
   HoldingUI: {fileID: 1160961380028272509, guid: aeef660e746c34464a404b6548ffab67, type: 3}
-  InitScenePath: Assets/Scenes/Runtime/Title.unity
+  InitScenePath: Assets/Scenes/Level/Level 1.unity
 --- !u!4 &1074153300
 Transform:
   m_ObjectHideFlags: 0
