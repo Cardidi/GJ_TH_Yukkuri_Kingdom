@@ -136,7 +136,7 @@ PlayerSettings:
     16:10: 1
     16:9: 0
     Others: 0
-  bundleVersion: build_7
+  bundleVersion: 20211021_1_bounce_0.4
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
