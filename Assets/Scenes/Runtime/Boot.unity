@@ -158,7 +158,7 @@ MonoBehaviour:
   LevelFailedUI: {fileID: 5016597896710171890, guid: c14b701eeb0094200b37f7b34d58f8b9, type: 3}
   HoldingUI: {fileID: 1160961380028272509, guid: aeef660e746c34464a404b6548ffab67, type: 3}
   CoverageUI: {fileID: 8083574618045095105, guid: 97c2f4687a12b104a87f2369460daf16, type: 3}
-  InitScenePath: Assets/Scenes/Runtime/Title.unity
+  InitScenePath: Assets/Scenes/Level/New Level 15.unity
 --- !u!4 &1074153300
 Transform:
   m_ObjectHideFlags: 0
