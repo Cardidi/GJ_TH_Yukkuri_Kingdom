@@ -596,7 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ListeningButtonSet: {fileID: 761925089}
   TrueToOpen: 1
-  TargetLevelPath: Assets/Scenes/Level/Level 1.unity
+  TargetLevelPath: 
 --- !u!1001 &368492472
 PrefabInstance:
   m_ObjectHideFlags: 0
